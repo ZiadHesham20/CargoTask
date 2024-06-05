@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% block content %}
+
+    <div class="container is-widescreen is-align-self-flex-start">
+        <div class="card">
+            <header class="card-header">
+                <p class="card-header-title">User Data</p>
+            </header>
+            <div class="card-content p-4">
+                <div class="content userDataCard">
+
+                </div>
+            </div>
+            <footer class="card-footer">
+                <button class="button js-modal-trigger editButton card-footer-item has-text-primary">Edit</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- id="modal-js" -->
+    <div id="modal-js" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Edit</p>
+                <button class="delete" onclick="closeModal()" aria-label="close"></button>
+            </header>
+
+            <footer class="modal-card-foot">
+                <div class="buttons">
+                    <button class="button is-success" onclick="closeModal()">Are you sure?</button>
+                    <button class="button" onclick="closeModal()">Cancel</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="../static/js/dummy.js"></script>
+    {% endblock content %}
+</body>
+
+</html>

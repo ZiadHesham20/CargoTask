@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/static/css/bulma.css" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    {% include '_navbar.html' %}
+  </header>
+  <div class="fixed-grid has-6-cols mb-0">
+    <div class="grid">
+      <!-- SideBar -->
+      <div class="sideBar cell is-col-span-1 ">
+        {% include '_sidebar.html' %}
+      </div>
+      <!-- Content -->
+      <section class="Content cell is-col-span-5 hero is-fullheight ">
+        <div class="hero-body pt-2 pb-0">
+          {% block content %}
+          {% include '_loginForm.html' %}
+          {% endblock content%}
+        </div>
+      </section>
+    </div>
+  </div>
+
+</body>
+
+</html>
